@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umang Fest 2K26 | College Food Counter</title>
+    <style>
+        /* --- DESIGN STYLES --- */
+        :root {
+            --paper: #f3e5ab;
+            --dark-red: #8b0000;
+            --bright-red: #d32f2f;
+            --orange: #f57c00;
+            --brown: #5d4037;
+        }
+
+        body {
+            margin: 0;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #7b0000 0%, #ff4500 100%);
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--paper);
+            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            overflow: hidden;
+            border: 5px solid rgba(255,255,255,0.2);
+        }
+
+        header {
+            background: var(--dark-red);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            border-bottom: 6px solid var(--orange);
+        }
+
+        .fest-title {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 900;
+            text-shadow: 3px 3px 0px var(--orange);
+        }
+
+        .sub-text { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; }
+        
+        .badge {
+            background: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* Menu Section */
+        .section-title {
+            color: var(--brown);
+            text-align: center;
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            padding: 0 20px;
+        }
+
+        .menu-card {
+            background: white;
+            border: 2px solid var(--brown);
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .item-info {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .price-tag {
+            background: var(--bright-red);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        /* Form Section */
+        .order-box {
+            background: rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-top: 30px;
+            border-top: 2px dashed var(--brown);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .full { grid-column: span 2; }
+
+        input, select {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .btn-order {
+            grid-column: span 2;
+            background: linear-gradient(to bottom, #4CAF50, #2E7D32);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 0 #1b4d1e;
+            margin-top: 10px;
+        }
+
+        .btn-order:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #1b4d1e;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--brown);
+        }
+
+        @media (max-width: 500px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .full { grid-column: span 1; }
+            .btn-order { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="sub-text">WELCOME TO</div>
+        <h1 class="fest-title">UMANG</h1>
+        <div class="sub-text" style="color:var(--orange)">FEST 2K26</div>
+        <span class="badge">COLLEGE FOOD COUNTER</span>
+    </header>
+
+    <div class="section-title">➤ OUR MENU <span><</span></div>
+    
+    <div class="menu-grid">
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Burger">
+            <div class="item-info"><span>Cheese Burger</span> <span class="price-tag">₹80</span></div>
+        </div>
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400" alt="Fries">
+            <div class="item-info"><span>Crispy Fries</span> <span class="price-tag">₹60</span></div>
+        </div>
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pizza">
+            <div class="item-info"><span>Veg Pizza</span> <span class="price-tag">₹120</span></div>
+        </div>
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" alt="Mocktail">
+            <div class="item-info"><span>Mocktails</span> <span class="price-tag">₹50</span></div>
+        </div>
+    </div>
+
+    <div class="order-box">
+        <div class="section-title">➤ PLACE YOUR ORDER <span><</span></div>
+        <form id="festOrderForm" class="form-grid">
+            <input type="text" id="custName" placeholder="Your Name" required>
+            <input type="tel" id="custPhone" placeholder="Mobile Number" required>
+            
+            <select id="foodSelect" class="full" required>
+                <option value="">Select Item</option>
+                <option value="Cheese Burger" data-price="80">Cheese Burger (₹80)</option>
+                <option value="Crispy Fries" data-price="60">Crispy Fries (₹60)</option>
+                <option value="Veg Pizza" data-price="120">Veg Pizza (₹120)</option>
+                <option value="Mocktails" data-price="50">Chilled Mocktails (₹50)</option>
+            </select>
+            
+            <input type="number" id="foodQty" placeholder="Quantity" min="1" value="1" required>
+            <input type="text" id="location" placeholder="Table / Department" required>
+            
+            <button type="submit" class="btn-order">SUBMIT ORDER TO SELLER</button>
+        </form>
+    </div>
+
+    <footer>
+        <strong>Fast Delivery • Fresh & Tasty • 100% Hygienic</strong><br>
+        Contact Us: @UmangFest2K26
+    </footer>
+</div>
+
+<script>
+    // --- WHATSAPP CONNECTION LOGIC ---
+    document.getElementById('festOrderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // 1. SET THE SELLER'S PHONE NUMBER HERE (e.g., 91 followed by 10 digits)
+        const sellerWhatsApp = "6209231138"; 
+
+        // 2. Collect user info
+        const name = document.getElementById('custName').value;
+        const phone = document.getElementById('custPhone').value;
+        const item = document.getElementById('foodSelect').value;
+        const qty = document.getElementById('foodQty').value;
+        const loc = document.getElementById('location').value;
+        
+        // 3. Calculate Price
+        const price = document.getElementById('foodSelect').selectedOptions[0].getAttribute('data-price');
+        const total = price * qty;
+
+        // 4. Format the message for WhatsApp
+        // %0A is a "New Line" in URL encoding
+        const text = `*-- NEW UMANG FEST ORDER --*%0A%0A` +
+                     `*Customer:* ${name}%0A` +
+                     `*Phone:* ${phone}%0A` +
+                     `*Order:* ${item} x ${qty}%0A` +
+                     `*Location:* ${loc}%0A` +
+                     `--------------------------%0A` +
+                     `*Total Amount: ₹${total}*%0A` +
+                     `--------------------------%0A` +
+                     `_Please prepare the order!_`;
+
+        // 5. Open WhatsApp
+        const waUrl = `https://wa.me/${sellerWhatsApp}?text=${text}`;
+        window.open(waUrl, '_blank');
+
+        alert("Order placed! You are being redirected to WhatsApp to notify the seller.");
+    });
+</script>
+
+</body>
+</html>
